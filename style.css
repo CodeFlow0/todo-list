@@ -111,10 +111,6 @@ h1 {
   font-size: 2.5rem;
 }
 
-.create {
-  font-size: 1.5rem;
-}
-
 /* Filters */
 
 #filters {
@@ -286,13 +282,13 @@ h1 {
 /* Checked, Indeterminate */
 .cl-checkbox>input:checked,
 .cl-checkbox>input:indeterminate {
-  background-color: #018786;
+  background-color: #16db65;
 }
 
 .cl-checkbox>input:checked+span::before,
 .cl-checkbox>input:indeterminate+span::before {
-  border-color: #018786;
-  background-color: #018786;
+  border-color: #16db65;
+  background-color: #16db65;
 }
 
 .cl-checkbox>input:checked+span::after,
@@ -400,4 +396,79 @@ h1 {
 #create-task input:valid+label span {
   color: rgba(20, 20, 20, .8);
   transform: translateY(-30px);
+}
+
+/* Create button */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.create {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  margin-left: 2rem;
+  padding: 0.7em 1.7em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.create:active {
+  color: #666;
+}
+
+.create:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.create:after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #16db65;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.create:hover {
+  color: #ffffff;
+  border: 1px solid #16db65;
+  cursor: pointer;
+}
+
+.create:hover:before {
+  top: -35%;
+  background-color: #16db65;
+}
+
+.create:hover:after {
+  top: -45%;
+  background-color: #16db65;
 }
