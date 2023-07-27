@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section id="container">
+    <div id="list-container">
+      <h1>To Do List</h1>
+      <div id="list">
+        <div id="filters">
+          <label class="filter">
+            <input type="radio" name="taskFilter" value="all" checked>
+            <span class="name">All</span>
+          </label>
+          <div class="filter">
+            <label class="filter">
+              <input type="radio" name="taskFilter" value="completed" checked>
+              <span class="name">Completed</span>
+            </label>
+          </div>
+          <div class="filter">
+            <label class="filter">
+              <input type="radio" name="taskFilter" value="active" checked>
+              <span class="name">Active</span>
+            </label>
+          </div>
+        </div>
+
+        <div id="todo-list">
+
+        </div>
+        <!-- <form id="create-task">
+          <input type="text" id="new-task-content" placeholder="New Task" required>
+          <button class="create">Create</button>
+        </form> -->
+
+        <form id="create-task">
+          <input type="text" id="new-task-content" required="">
+          <label>
+            <span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">e</span><span
+              style="transition-delay:100ms">w</span><span style="transition-delay:150ms"></span><span
+              style="transition-delay:200ms">T</span><span style="transition-delay:250ms">a</span><span
+              style="transition-delay:300ms">s</span><span style="transition-delay:350ms">k</span>
+          </label>
+          <button class="create">Create</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
